@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --clr-primary: #7380ec;
+    --clr-danger: #ff7782;
+    --clr-success: #38b8b2;
+    --clr-lightgray: #f6f6f9;
+    --clr-info-dark: #7d8da1;
+    --clr-info-light: #dce1eb;
+    --clr-dark: #363949;
+    --clr-warnig: #ff4edc;
+    --clr-light: rgba(132, 139, 200, 0.18);
+    --clr-primary-variant: #111e88;
+    --clr-dark-variant: #677483;
+    --clr-color-background: #fff;
+
+    --card-border-radius: 2rem;
+    --border-radius-1: 0.4rem;
+    --border-radius-2: 0.8rem;
+    --border-radius-3: 1.2rem;
+
+    --card-padding: 1.8rem;
+    --padding-1: 1.2rem;
+    --box-shadow: 0 2rem 3rem var(--clr-light);
+
+}
+
+/* dark theme */
+.dark-theme-variables {
+    --clr-color-background: #181a1e;
+    --clr-lightgray: #202528;
+    --clr-light: rgba(0, 0, 0, 0.4);
+    --clr-dark: #edeffd;
+    --clr-dark-variant: #677483;
+    --box-shadow: 0 2rem 3rem var(--clr-light)
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 100vw;
+    height: 100wh;
+    font-size: 0.88rem;
+    user-select: none;
+    overflow-x: hidden;
+    background: var(--clr-color-background);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: 0;
+    list-style: none;
+    appearance: none;
+}
+
+.container {
+    display: grid;
+    width: 96%;
+    gap: 1.8rem;
+    grid-template-columns: 14rem auto;
+    /* right 있을 때 */
+    /* grid-template-columns: 14rem auto 14rem; */
+    margin: 0 auto;
+}
+
+a {
+    color: var(--clr-dark)
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 1.8rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+h3 {
+    font-size: 0.87rem;
+}
+
+h4 {
+    font-size: 0.8rem;
+}
+
+h5 {
+    font-size: 0.77rem;
+}
+
+small {
+    font-size: 0.75rem;
+}
+
+.profile-photo {
+    width: 2.8rem;
+    height: 2.8rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text-muted {
+    color: var(--clr-info-dark);
+}
+
+p {
+    color: var(--clr-dark-variant);
+}
+
+b {
+    color: var(--clr-dark);
+}
+
+.primary {
+    color: var(--clr-primary);
+}
+
+.success {
+    color: var(--clr-success);
+}
+
+.danger {
+    color: var(--clr-danger);
+}
+
+.warning {
+    color: var(--clr-warnig);
+}
+
+
+/* aside */
+
+div.devider {
+    margin: 10px 0px;
+}
+
+aside {
+    height: 100vh;
+    background-color: var(--clr-lightgray);
+}
+
+aside .top {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.4rem;
+}
+
+aside .logo {
+    display: flex;
+    gap: 1rem;
+}
+
+
+/* **********************
+ sidebar 
+ ********************** */
+
+aside .sidebar {
+    background-color: var(--clr-lightgray);
+    display: flex;
+    flex-direction: column;
+    height: 85vh;
+    padding: 10px 0px;
+    position: relative;
+    top: 1rem;
+}
+
+aside .h3 {
+    font-weight: 500;
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--clr-info-dark);
+    margin-left: 2rem;
+    gap: 1rem;
+    align-items: center;
+    height: 3.2rem;
+    transition: all .1s ease-in;
+
+}
+
+aside .top div.close span {
+    display: none;
+    /* position: absolute; */
+    /* right: 0;
+    margin-left: 30px;
+    font-size: 35px; */
+}
+
+aside .sidebar a span {
+    font-size: 1.6rem;
+    transition: all .1s ease-in;
+}
+
+aside .sidebar a:last-child {
+    position: absolute;
+    bottom: 1rem;
+    width: 100%;
+}
+
+
+aside .sidebar a.active {
+    background: var(--clr-light);
+    color: var(--clr-primary);
+    margin-left: 0;
+    /* border-left: 5px solid var(--clr-primary); */
+}
+
+aside .sidebar a.active::before {
+    content: '';
+    width: 6px;
+    height: 100%;
+    background-color: var(--clr-primary);
+}
+
+aside .sidebar a:hover {
+    color: var(--clr-primary)
+}
+
+aside .sidebar a:hover span {
+    margin-left: 1rem;
+    transition: .2s ease-in;
+}
+
+
+/* main */
+main .chat-container {
+    display: grid;
+    height: 96%;
+    gap: 1.8rem;
+    grid-template-rows: 14rem auto 14rem;
+    /* right 있을 때 */
+    /* grid-template-columns: 14rem auto 14rem; */
+    margin: 0 auto;
+}
+
+
+
+
+
+/* **********************
+ Media Query 
+ ********************** */
+
+@media screen and (max-width: 800px) {
+    .container {
+        width: 94%;
+        grid-template-columns: 7rem auto;
+    }
+
+    aside .sidebar h3 {
+        display: none;
+    }
+
+    aside .sidebar a:last-child {
+        position: relative;
+        margin-top: 1.8rem;
+    }
+}
